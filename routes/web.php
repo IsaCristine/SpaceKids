@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 
@@ -11,9 +12,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('head');
+    return view('home')->with('css', 'test.css');
 });
 
-Auth::routes();
+Route::get('login', function () {
+    return view('auth.login');
+});
+
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
