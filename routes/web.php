@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HistoryController;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,8 @@ Route::get('/', function () {
     return view('home')->with('css', 'test.css');
 });
 
-Route::get('login', function () {
-    return view('auth.login');
-});
+Route::get('/admin/history', [HistoryController::class, 'index']);
+
 
 //Auth::routes();
 

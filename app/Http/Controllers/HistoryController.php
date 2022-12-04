@@ -15,7 +15,7 @@ class HistoryController extends Controller
     public function index()
     {
         $histories = History::all();
-        return view('history.index', compact('histories'));
+        return view('admin.history.index', compact('histories'));
     }
 
     /**
@@ -25,7 +25,8 @@ class HistoryController extends Controller
      */
     public function create()
     {
-        
+        $history = new History();
+        return view('history.create', compact('history'));
     }
 
     /**
