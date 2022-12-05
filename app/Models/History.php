@@ -11,6 +11,7 @@ class History extends Model
 
     protected $fillable = [
         'title',
+        'category',
         'image',
         'paragraph1',
         'paragraph2',
