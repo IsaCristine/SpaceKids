@@ -37,7 +37,11 @@ class HistoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        History::create($data);
+
+        return redirect()->route('history.index')->with('success', 'História adicionada com sucesso!');
     }
 
     /**
@@ -48,7 +52,7 @@ class HistoryController extends Controller
      */
     public function show(History $history)
     {
-        //
+        //??
     }
 
     /**
@@ -59,7 +63,7 @@ class HistoryController extends Controller
      */
     public function edit(History $history)
     {
-        //
+        return view('history.edit', compact('history'));
     }
 
     /**
@@ -71,7 +75,11 @@ class HistoryController extends Controller
      */
     public function update(Request $request, History $history)
     {
-        //
+        $data = $request->all();
+
+        $history->update($data);
+
+        return redirect()->route('history.index')->with('success', 'História atualizada com sucesso!');
     }
 
     /**
@@ -82,6 +90,8 @@ class HistoryController extends Controller
      */
     public function destroy(History $history)
     {
-        //
+        $history->delete();
+
+        return redirect()->route('history.index')->with('success', 'História removida com sucesso!');
     }
 }
