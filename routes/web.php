@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
@@ -12,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/', function () {
-    return view('home')->with('css', 'test.css');
-});
+Route::get('/', [ViewController::class, 'index'])->name('home');
 
 Route::get('/admin/history', [HistoryController::class, 'index']);
 

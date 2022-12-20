@@ -1,0 +1,26 @@
+body {
+    background-image: url("../../assets/home_bg.gif");
+}
+
+.home_text {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 993px) {
+    .home_body {
+        display: grid !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .home_gif {
+        height: 80%;
+        width: 80%;
+    }
+
+    .home_text {
+        font-size: 1.5rem;
+    }
+}
