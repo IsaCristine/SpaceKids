@@ -11,6 +11,11 @@ class ViewController extends Controller
         return view('site.home')->with('css', 'site/home.css');
     }
 
+    public function histories()
+    {
+        return view('site.histories')->with('css', 'site/histories.css');
+    }
+
     public function spaceIndex()
     {
         return view('');
