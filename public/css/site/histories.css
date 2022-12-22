@@ -18,7 +18,20 @@ body {
     color: rgb(242, 242, 242) !important;
 }
 
+/*Cards da página:*/
+.cards-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 /*Card:*/
+.card-style {
+    margin-bottom: 10% !important;
+}
+
+/*Corpo do card:*/
 .card-body {
     align-items: center !important;
     justify-content: center !important;
@@ -68,5 +81,5 @@ body {
     background-color: var(--verde) !important;
     border-color: var(--verde) !important;
     color: var(--azul-2) !important;
-    transition: 0.5s;
+    transition: 0.3s;
 }
