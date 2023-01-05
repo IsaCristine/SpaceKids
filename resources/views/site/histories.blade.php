@@ -40,12 +40,12 @@
 
                     {{--Cards da página--}}
                     <?php for($i = 0; $i < 8; $i++): ?>
-                    <div class="col-md-3 d-flex justify-content-around align-items-center">
+                    <div class="col-md-3 d-flex">
                       <div class="card card-style" style="width: 15rem; height: 17rem">
                           <div class="card-body">
                             <div class="btn-card">
                               <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                              <div class="btn btn-primary history-btn write-btn">Ler</div>
+                              <div class="btn btn-primary history-btn read-btn">Ler</div>
                             </div>
                           </div>
                       </div>
