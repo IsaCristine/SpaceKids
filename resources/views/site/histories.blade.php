@@ -25,102 +25,53 @@
         </div>
 
         {{--Barra de pesquisa:--}}
-        <div class="search-bar">
-            {{--Search Bar--}}
+        <div class="d-flex justify-content-end search-bar">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Pesquisar</button>
+        </form>
         </div>
 
         {{--Cards de histórias:--}}
         <div class="histories-table">
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-between">
                 {{--Cards de uma row:--}}
                 <div class="cards-row">
 
-                    {{--Card 1:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
+                    {{--Cards da página--}}
+                    <?php for($i = 0; $i < 8; $i++): ?>
+                    <div class="col-md-3 d-flex justify-content-around align-items-center">
+                      <div class="card card-style" style="width: 15rem; height: 17rem">
+                          <div class="card-body">
+                            <div class="btn-card">
+                              <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
+                              <div class="btn btn-primary history-btn write-btn">Ler</div>
                             </div>
-                        </div>
+                          </div>
+                      </div>
                     </div>
-                    {{--Fim do Card 1--}}
-
-                    {{--Card 2:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--Card 3:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--Card 4:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--Card 5:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--Card 6:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{--Card 7:--}}
-                    <div class="col">
-                        <div class="card card-style" style="width: 15rem; height: 18rem">
-                            <div class="card-body">
-                              <div class="btn-card">
-                                <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
-                                <div class="btn btn-primary history-btn write-btn">Ler</div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endfor; ?>
+                    {{--Fim dos cards de teste--}}
 
                 </div>
+                {{--Paginação:--}}
+                <div class="pagination">
+                  <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item disabled">
+                          <a class="page-link">Voltar</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Avançar</a>
+                        </li>
+                      </ul>
+                    </nav>
+              </div>
+                {{--Fim da Paginação--}}
             </div>
         </div>
 
