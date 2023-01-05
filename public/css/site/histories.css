@@ -30,6 +30,8 @@ body {
 /*Barra de pesquisa:*/
 .search-bar {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*Cards da página:*/
@@ -70,6 +72,7 @@ body {
     height: 100%;
     display: grid;
     align-items: center;
+    letter-spacing: 1.5px !important;
 }
 
 .btn-card:hover {
@@ -109,15 +112,12 @@ body {
     padding: 0 !important;
 }
 
-/* @media screen and (min-width: 200px) and (max-width: 1000px) {
+@media (max-width: 426px) {
     .search-bar {
-        display: none;
+        justify-content: center !important;
     }
-} */
 
-@media (max-width: 460px) {
-    .search-bar {
-        margin-left: none !important;
-        margin-right: none !important;
+    .btn-card {
+        opacity: 1;
     }
 }

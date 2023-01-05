@@ -25,7 +25,7 @@
         </div>
 
         {{--Barra de pesquisa:--}}
-        <div class="d-flex justify-content-end search-bar">
+        <div class="search-bar">
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
             <button class="btn btn-secondary" type="submit">Pesquisar</button>
