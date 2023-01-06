@@ -31,7 +31,7 @@
                     <tr>
                         <th scope="row">{{ $user->name }}</th>
                         <td>
-                            <a href="{{ route('admin.user.show', $user->id) }}" class="btn btn-secondary"><i class="bi bi-search"></i></a>
+                            <a href="{{ route('admin.user.show', $user->id) }}" class="btn btn-secondary"><i class="bi bi-eye"></i></a>
                             <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
                             <a href="{{ route('admin.user.delete', $user->id) }}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
                         </td>
@@ -42,7 +42,7 @@
                 @for ($i = 0; $i < 10; $i++)
                 <tr>
                     <th scope="row">{{ $i.$i.$i.$i.$i.$i }}</th>
-                    <td> <a href="{{-- {{ route('admin.user.show', $user->id) }} --}}" class="btn btn-secondary"><i class="bi bi-search"></i></a>
+                    <td> <a href="{{-- {{ route('admin.user.show', $user->id) }} --}}" class="btn btn-secondary"><i class="bi bi-eye"></i></a>
                         <a href="{{-- {{ route('admin.user.edit', $user->id) }} --}}" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
                         <a href="{{-- {{ route('admin.user.delete', $user->id) }} --}}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
                     </td>
