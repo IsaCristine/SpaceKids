@@ -21,6 +21,8 @@ Route::get('/histories', [ViewController::class, 'histories'])->name('histories'
 
 Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 
+Route::get('/login', [ViewController::class, 'login'])->name('login');
+
 
 //Auth::routes();
 

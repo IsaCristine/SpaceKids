@@ -20,6 +20,11 @@ class ViewController extends Controller
         return view('site.contact')->with('css', 'site/contact.css');
     }
 
+    public function login()
+    {
+        return view('site.login')->with('css', 'site/login.css');
+    }
+
     public function spaceIndex()
     {
         return view('');

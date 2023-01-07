@@ -172,7 +172,7 @@ body {
     }
 }
 
-/* background for contact form in contact page*/
+/* background contact form */
 .background {
     background: #A5A39A;
     border-radius: 10px;
@@ -190,6 +190,11 @@ body {
 }
 
 .form-contact {
+    max-width: 100%;
+    width: 100%;
+}
+
+.form-login {
     max-width: 100%;
     width: 100%;
 }
@@ -240,4 +245,38 @@ body {
     /*    center the div horizontally*/
     text-align: center;
     margin: 2rem 0;
+}
+
+
+/* grid */
+.grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.logo {
+    grid-column: 1/2 ;
+    width: 100%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* labels */
+.form-login label {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* containers */
+.login-container {
+    margin: 5rem 0;
+}
+
+/* backgrounds */
+.background-login {
+    background: #0A0D46;
+    border: 5px solid rgba(92, 53, 4, 0.6);
 }
