@@ -15,6 +15,10 @@ class ViewController extends Controller
     {
         return view('site.histories')->with('css', 'site/histories.css');
     }
+    public function contact()
+    {
+        return view('site.contact')->with('css', 'site/contact.css');
+    }
 
     public function spaceIndex()
     {
@@ -25,7 +29,7 @@ class ViewController extends Controller
     {
         return view('');
     }
-    
+
     public function earthIndex()
     {
         return view('');

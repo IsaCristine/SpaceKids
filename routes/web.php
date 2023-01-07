@@ -19,6 +19,8 @@ Route::get('/admin/history', [HistoryController::class, 'index']);
 
 Route::get('/histories', [ViewController::class, 'histories'])->name('histories');
 
+Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
+
 
 //Auth::routes();
 
