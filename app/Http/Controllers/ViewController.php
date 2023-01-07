@@ -25,6 +25,11 @@ class ViewController extends Controller
         return view('site.login')->with('css', 'site/login.css');
     }
 
+    public function adm()
+    {
+        return view('site.adm')->with('css', 'site/adm.css');
+    }
+
     public function spaceIndex()
     {
         return view('');

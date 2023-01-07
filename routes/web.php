@@ -23,6 +23,8 @@ Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 
 Route::get('/login', [ViewController::class, 'login'])->name('login');
 
+Route::get('/adm', [ViewController::class, 'adm'])->name('adm');
+
 
 //Auth::routes();
 
