@@ -40,7 +40,7 @@
                     <tr>
                         <th scope="row">{{ $user->name }}</th>
                         <td>
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#showAdmin{{ $user->id }}""><i
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#showAdmin{{ $user->id }}"><i
                                     class="bi bi-eye"></i></button>
                             @include('admin.users.show')
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editAdmin{{ $user->id }}"><i

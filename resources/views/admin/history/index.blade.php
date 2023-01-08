@@ -15,35 +15,38 @@
 
 <body>
 
+    <div class="container">
+        
 
-    @for ($i = 0; $i < 10; $i++)
-        <div style="width: 40%; padding: 4rem">
-            <div class="card card--editor">
-                <header class="card__header">
-                    <img class="card__image" src="images/logo.png" alt="">
-                </header>
-                <div class="card__body">
-                    Lorem ipsum
+        @for ($i = 0; $i < 10; $i++)
+            <div style="width: 40%; padding: 4rem">
+                <div class="card card--editor">
+                    <header class="card__header">
+                        <img class="card__image" src="images/logo.png" alt="">
+                    </header>
+                    <div class="card__body">
+                        Lorem ipsum
+                    </div>
+
+                    <div class="d-flex justify-center">
+                        <footer class="card__footer">
+                            <button class="btn btn-secondary">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </footer>
+                    </div>
+
                 </div>
-
-                <div>
-                    <footer class="card__footer">
-                        <button class="btn">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <button class="btn">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button class="btn">
-                            <i class="bi bi-trash3"></i>
-                        </button>
-                    </footer>
-                </div>
-
             </div>
-        </div>
-    @endfor
+        @endfor
 
+    </div>
 
 </body>
 
