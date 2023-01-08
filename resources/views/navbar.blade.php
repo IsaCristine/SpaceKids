@@ -18,7 +18,7 @@
             <a class="nav__link" href="#">Contato</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="#">Login</a>
+            <a class="nav__link" href="{{ route('login') }}">Login</a>
         </li>
     </ul>
 </nav>
