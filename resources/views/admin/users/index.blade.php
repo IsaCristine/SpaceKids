@@ -15,20 +15,20 @@
 
 <body>
     <header>
-        <h1>Administradores</h1>
+        <h1 class="title">Administradores</h1>
     </header>
 
     <!-- Button trigger modal -->
     <div class="container create-btn">
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createAdmin">
-            Criar novo Administrador
+            Novo
         </button>
     </div>
 
     @include('admin.users.create')
 
     <div class="container">
-        <table class="table table-striped">
+        <table class="table table-striped users-table">
             <thead>
                 <tr>
                     <th scope="col">Nome do Administrador</th>
