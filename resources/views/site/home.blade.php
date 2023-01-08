@@ -8,6 +8,7 @@
     {{--Importa todo o Bootstrap:--}}
     @vite(['resources/js/app.js'])
     {{--Importa o CSS utilizado na rota:--}}
+    <link rel="stylesheet" href="/css/site/navbar.css">
     <link rel="stylesheet" href="/css/{{$css}}">	
 
     <title>Inicio</title>
@@ -16,6 +17,10 @@
 
 
 <body>
+
+    @include('navbar')
+
+    {{--Container geral da página:--}}
     <div class="container home_container">
         <div class="row align-items-center justify-content-center home_body">
             <div class="col d-flex justify-content-center">
