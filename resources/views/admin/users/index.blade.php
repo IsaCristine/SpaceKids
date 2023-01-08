@@ -21,7 +21,7 @@
     <!-- Button trigger modal -->
     <div class="container create-btn">
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createAdmin">
-            Novo
+            Adicionar <i class="bi bi-plus-circle"></i>
         </button>
     </div>
 
@@ -55,6 +55,22 @@
 
             </tbody>
         </table>
+
+        <div class="pagination">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link">Voltar</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Avançar</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+
     </div>
 </body>
 
