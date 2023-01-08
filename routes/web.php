@@ -26,7 +26,14 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //Admin History Routes
 
-Route::get('/admin/history', [HistoryController::class, 'index']);
+Route::get('/admin/history', [HistoryController::class, 'index'])->name('history.index');
+
+Route::post('/admin/history/create', [HistoryController::class, 'create'])->name('history.create');
+
+Route::put('/admin/history/{history}', [HistoryController::class, 'edit'])->name('history.edit');
+
+Route::delete('/admin/history/{history}', [HistoryController::class, 'delete'])->name('history.delete');
+
 
 //Admin User Routes
 

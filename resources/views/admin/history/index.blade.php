@@ -16,35 +16,45 @@
 <body>
 
     <div class="container">
-        
 
-        @for ($i = 0; $i < 10; $i++)
+        <div class="container create-btn">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createHistory">
+                Criar nova Historia
+            </button>
+        </div>
+
+        @include('admin.history.create')
+
+        @foreach ($histories as $history)
             <div style="width: 40%; padding: 4rem">
                 <div class="card card--editor">
                     <header class="card__header">
                         <img class="card__image" src="images/logo.png" alt="">
                     </header>
                     <div class="card__body">
-                        Lorem ipsum
+                        {{ $history->title }}
                     </div>
 
                     <div class="d-flex justify-center">
                         <footer class="card__footer">
-                            <button class="btn btn-secondary">
+                            <button data-bs-target="#showHistory{{ $history->id }}" data-bs-toggle="modal" class="btn btn-secondary">
                                 <i class="bi bi-eye"></i>
                             </button>
-                            <button class="btn btn-primary">
+                            @include('admin.history.show')
+                            <button data-bs-target="#editHistory{{ $history->id }}" data-bs-toggle="modal" class="btn btn-primary">
                                 <i class="bi bi-pencil-square"></i>
                             </button>
-                            <button class="btn btn-danger">
+                            @include('admin.history.edit')
+                            <button data-bs-target="#deleteHistory{{ $history->id }}" data-bs-toggle="modal" class="btn btn-danger">
                                 <i class="bi bi-trash3"></i>
                             </button>
+                            @include('admin.history.delete')
                         </footer>
                     </div>
 
                 </div>
             </div>
-        @endfor
+        @endforeach
 
     </div>
 
