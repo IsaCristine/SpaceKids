@@ -19,7 +19,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Categoria</label>
-                            <select class="form-select" aria-label="Default select example" name="category">
+                            <select class="form-select" required aria-label="Default select example" name="category">
                                 <option selected>Selecione uma categoria</option>
                                 <option value="Space">Espaço</option>
                                 <option value="Fantasy">Fantasia</option>
