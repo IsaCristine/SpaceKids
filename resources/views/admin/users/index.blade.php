@@ -40,16 +40,19 @@
                     <tr>
                         <th scope="row">{{ $user->name }}</th>
                         <td>
-                            <a href="{{ route('user.show', $user->id) }}" class="btn btn-secondary"><i
-                                    class="bi bi-eye"></i></a>
-                            <a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary"><i
-                                    class="bi bi-pencil-square"></i></a>
-                            <a href="{{ route('user.delete', $user->id) }}" class="btn btn-danger"><i
-                                    class="bi bi-trash3"></i></a>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#showAdmin{{ $user->id }}""><i
+                                    class="bi bi-eye"></i></button>
+                            @include('admin.users.show')
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editAdmin{{ $user->id }}"><i
+                                    class="bi bi-pencil-square"></i></button>
+                            @include('admin.users.edit')
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAdmin{{ $user->id }}"><i
+                                    class="bi bi-trash3"></i></button>
+                            @include('admin.users.delete')
                         </td>
                     </tr>
                 @endforeach
-                
+
             </tbody>
         </table>
     </div>

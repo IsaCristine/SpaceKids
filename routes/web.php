@@ -26,11 +26,9 @@ Route::get('/admin/users', [UserController::class, 'index'])->name('user.index')
 
 Route::post('/admin/users/create', [UserController::class, 'create'])->name('user.create');
 
-Route::get('/admin/users/{id}', [UserController::class, 'show'])->name('user.show');
+Route::put('/admin/users/{user}', [UserController::class, 'edit'])->name('user.edit');
 
-Route::get('/admin/users/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
-
-Route::post('/admin/users/{id}/delete', [UserController::class, 'delete'])->name('user.delete');
+Route::delete('/admin/users/{user}', [UserController::class, 'delete'])->name('user.delete');
 
 //Auth::routes();
 

@@ -52,9 +52,13 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User $user, Request $request)
     {
-        //
+        $data = $request->all();
+
+        $user->update($data);
+
+        return redirect()->route('user.index')->with('success', 'Usuário editado com sucesso!');
     }
 
 
@@ -64,8 +68,10 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function delete(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('user.index')->with('success', 'Usuário deletado com sucesso!');
     }
 }
