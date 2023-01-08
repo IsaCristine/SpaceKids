@@ -22,7 +22,7 @@ Route::get('/admin/history', [HistoryController::class, 'index']);
 
 //Admin User Routes
 
-Route::get('/admin/users', [UserController::class, 'index']);
+Route::get('/admin/users', [UserController::class, 'index'])->name('user.index');
 
 Route::post('/admin/users/create', [UserController::class, 'create'])->name('user.create');
 
@@ -30,7 +30,7 @@ Route::get('/admin/users/{id}', [UserController::class, 'show'])->name('user.sho
 
 Route::get('/admin/users/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
 
-
+Route::post('/admin/users/{id}/delete', [UserController::class, 'delete'])->name('user.delete');
 
 //Auth::routes();
 
