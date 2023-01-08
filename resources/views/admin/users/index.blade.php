@@ -18,6 +18,13 @@
         <h1>Administradores</h1>
     </header>
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createAdmin">
+        Launch demo modal
+    </button>
+
+    @include('admin.users.create')
+
     <div class="container">
         <table class="table table-dark table-striped">
             <thead>
@@ -31,26 +38,30 @@
                     <tr>
                         <th scope="row">{{ $user->name }}</th>
                         <td>
-                            <a href="{{ route('admin.user.show', $user->id) }}" class="btn btn-secondary"><i class="bi bi-eye"></i></a>
-                            <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
-                            <a href="{{ route('admin.user.delete', $user->id) }}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                            <a href="{{ route('user.show', $user->id) }}" class="btn btn-secondary"><i
+                                    class="bi bi-eye"></i></a>
+                            <a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary"><i
+                                    class="bi bi-pencil-square"></i></a>
+                            <a href="{{ route('user.delete', $user->id) }}" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></a>
                         </td>
                     </tr>
                 @endforeach
 
                 {{-- Example Itens --}}
                 @for ($i = 0; $i < 10; $i++)
-                <tr>
-                    <th scope="row">{{ $i.$i.$i.$i.$i.$i }}</th>
-                    <td> <a href="{{-- {{ route('admin.user.show', $user->id) }} --}}" class="btn btn-secondary"><i class="bi bi-eye"></i></a>
-                        <a href="{{-- {{ route('admin.user.edit', $user->id) }} --}}" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
-                        <a href="{{-- {{ route('admin.user.delete', $user->id) }} --}}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
-                    </td>
-                </tr>
+                    <tr>
+                        <th scope="row">{{ $i . $i . $i . $i . $i . $i }}</th>
+                        <td> <a href="{{-- {{ route('admin.user.show', $user->id) }} --}}" class="btn btn-secondary"><i class="bi bi-eye"></i></a>
+                            <a href="{{-- {{ route('admin.user.edit', $user->id) }} --}}" class="btn btn-primary"><i
+                                    class="bi bi-pencil-square"></i></a>
+                            <a href="{{-- {{ route('admin.user.delete', $user->id) }} --}}" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+                        </td>
+                    </tr>
                 @endfor
                 {{-- Example End --}}
-                
-               
+
+
             </tbody>
         </table>
     </div>

@@ -24,6 +24,14 @@ Route::get('/admin/history', [HistoryController::class, 'index']);
 
 Route::get('/admin/users', [UserController::class, 'index']);
 
+Route::post('/admin/users/create', [UserController::class, 'create'])->name('user.create');
+
+Route::get('/admin/users/{id}', [UserController::class, 'show'])->name('user.show');
+
+Route::get('/admin/users/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+
+
+
 //Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
