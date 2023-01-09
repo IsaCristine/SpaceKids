@@ -6,13 +6,13 @@
             <a class="nav__link" href="{{ route('home') }}">Inicio</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="#">Espaço</a>
+            <a class="nav__link" href="{{ route('space') }}">Espaço</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="#">Terra</a>
+            <a class="nav__link" href="{{ route('earth') }}">Terra</a>
         </li>
         <li class="nav__item">
-            <a class="nav__link" href="#">Fantasia</a>
+            <a class="nav__link" href="{{ route('fantasy') }}">Fantasia</a>
         </li>
         <li class="nav__item">
             <a class="nav__link" href="#">Contato</a>

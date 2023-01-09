@@ -22,6 +22,12 @@ Route::get('/home', [ViewController::class, 'index'])->name('home');
 
 Route::get('/histories', [ViewController::class, 'histories'])->name('histories');
 
+Route::get('/space', [ViewController::class, 'spaceIndex'])->name('space');
+
+Route::get('/fantasy', [ViewController::class, 'fantasyIndex'])->name('fantasy');
+
+Route::get('/earth', [ViewController::class, 'earthIndex'])->name('earth');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');

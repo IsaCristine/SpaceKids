@@ -60,9 +60,7 @@
 
                 </div>
                 {{--Paginação:--}}
-                {{ $histories->appends([
-                    'search' => request('search'),
-                ])->links() }}
+                {{ $histories->links() }}
                 {{--Fim da Paginação--}}
             </div>
         </div>

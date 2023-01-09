@@ -20,19 +20,19 @@ class ViewController extends Controller
 
     public function spaceIndex()
     {
-        $histories = History::paginate(8)->where('category', 'space');
-        return view('', compact('histories'))->with('css', 'site/history.css');
+        $histories = History::where('category', 'space')->paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
     public function fantasyIndex()
     {
-        $histories = History::paginate(8)->where('category', 'fantasy');
-        return view('', compact('histories'))->with('css', 'site/history.css');
+        $histories = History::where('category', 'fantasy')->paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
     
     public function earthIndex()
     {
-        $histories = History::paginate(8)->where('category', 'earth');
-        return view('', compact('histories'))->with('css', 'site/history.css');
+        $histories = History::where('category', 'earth')->paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 }
