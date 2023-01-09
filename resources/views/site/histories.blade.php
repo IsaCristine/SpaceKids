@@ -8,6 +8,7 @@
     {{--Importa todo o Bootstrap:--}}
     @vite(['resources/js/app.js'])
     {{--Importa o CSS utilizado na rota:--}}
+    <link rel="stylesheet" href="/css/site/navbar.css">
     <link rel="stylesheet" href="/css/{{$css}}">	
 
     <title>Historias</title>
@@ -17,6 +18,10 @@
 
 <body>
     {{--Container geral da página:--}}
+
+    @include('navbar')
+
+
     <div class="container histories-container">
 
         {{--Título da seção:--}}
