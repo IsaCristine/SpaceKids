@@ -1,0 +1,54 @@
+:root {
+    --azul-1: #14A3FE;
+    --azul-2: #012454;
+    --azul-3: #001736;
+    --verde: #07FFE1;
+    --amarelo: #FAFF07;
+    --rosa: #FB2AAB;
+    --preto: #0c0c0c;
+}
+
+.nav-site {
+    padding: 0 0 0 0 !important;
+    margin-bottom: 2rem;
+}
+
+.navbar_site {
+    background-color: var(--preto) !important;
+    color: white !important;
+    box-shadow: var(--azul-2) 0px 0px 10px 0px !important;
+}
+
+.navbar_site a {
+    color: var(--azul-1) !important;
+    display: flex;
+    justify-content: end !important;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.navbar_site a:hover {
+    color: var(--rosa) !important;
+    transition: 0.2s;
+}
+
+.nav_logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-navbar {
+    color: white !important;
+}
+
+.links-navbar li {
+    display: flex;
+    justify-content: end !important;
+}
+
+@media (max-width: 990px) {
+    .navbar_site a {
+        margin-right: 0.5rem;
+        margin-left: 0;
+    }
+}
