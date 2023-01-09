@@ -9,6 +9,7 @@
     @vite(['resources/js/app.js'])
     {{-- Importa o CSS utilizado na rota: --}}
     <link rel="stylesheet" href="/css/{{ $css }}">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Document</title>
 </head>
@@ -40,14 +41,15 @@
                     <tr>
                         <th scope="row">{{ $user->name }}</th>
                         <td>
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#showAdmin{{ $user->id }}"><i
-                                    class="bi bi-eye"></i></button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#showAdmin{{ $user->id }}"><i class="bi bi-eye"></i></button>
                             @include('admin.users.show')
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editAdmin{{ $user->id }}"><i
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#editAdmin{{ $user->id }}"><i
                                     class="bi bi-pencil-square"></i></button>
                             @include('admin.users.edit')
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAdmin{{ $user->id }}"><i
-                                    class="bi bi-trash3"></i></button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#deleteAdmin{{ $user->id }}"><i class="bi bi-trash3"></i></button>
                             @include('admin.users.delete')
                         </td>
                     </tr>
@@ -55,6 +57,12 @@
 
             </tbody>
         </table>
+
+        <div class="container d-flex justify-content-end">
+            {{ $users->appends([
+                    'search' => request()->get('search', ''),
+                ])->links() }}
+        </div>
     </div>
 </body>
 
