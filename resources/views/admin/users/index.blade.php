@@ -72,7 +72,7 @@
                 </tbody>
             </table>
     
-            <div class="container d-flex justify-content-end">
+            <div class="container d-flex justify-content-center">
                 {{ $users->appends([
                         'search' => request()->get('search', ''),
                     ])->links() }}
