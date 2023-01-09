@@ -15,7 +15,7 @@ class HistoryController extends Controller
     public function index()
     {
         $histories = History::all();
-        return view('admin.history.index', compact('histories'))->with('css', 'history.css');
+        return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 
     /**
@@ -23,26 +23,17 @@ class HistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $history = new History();
-        return view('history.create', compact('history'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function create(Request $request)
     {
         $data = $request->all();
 
-        History::create($data);
+        $history = new History();
+
+        $history::create($data);
 
         return redirect()->route('history.index')->with('success', 'História adicionada com sucesso!');
     }
+
 
     /**
      * Display the specified resource.
@@ -61,19 +52,7 @@ class HistoryController extends Controller
      * @param  \App\Models\History  $history
      * @return \Illuminate\Http\Response
      */
-    public function edit(History $history)
-    {
-        return view('history.edit', compact('history'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\History  $history
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, History $history)
+    public function edit(History $history, Request $request)
     {
         $data = $request->all();
 
@@ -88,7 +67,7 @@ class HistoryController extends Controller
      * @param  \App\Models\History  $history
      * @return \Illuminate\Http\Response
      */
-    public function destroy(History $history)
+    public function delete(History $history)
     {
         $history->delete();
 

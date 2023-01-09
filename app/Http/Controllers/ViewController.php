@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\History;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -18,16 +19,19 @@ class ViewController extends Controller
 
     public function spaceIndex()
     {
-        return view('');
+        $histories = History::all()->where('category', 'space');
+        return view('', compact('histories'))->with('css', 'site/history.css');
     }
 
     public function fantasyIndex()
     {
-        return view('');
+        $histories = History::all()->where('category', 'fantasy');
+        return view('', compact('histories'))->with('css', 'site/history.css');
     }
     
     public function earthIndex()
     {
-        return view('');
+        $histories = History::all()->where('category', 'earth');
+        return view('', compact('histories'))->with('css', 'site/history.css');
     }
 }
