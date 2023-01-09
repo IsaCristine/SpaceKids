@@ -1,0 +1,50 @@
+:root {
+    --azul-1: #14A3FE;
+    --azul-2: #012454;
+    --azul-3: #001736;
+    --verde: #07FFE1;
+    --amarelo: #FAFF07;
+    --rosa: #FB2AAB;
+}
+
+body {
+    background-image: url("../../assets/home_bg.gif");
+}
+
+.history_title {
+    margin-bottom: 2rem;
+    color: aliceblue;
+}
+
+.history_text {
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.history_text p {
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+    background-color: var(--rosa) !important;
+    border-color: var(--rosa) !important;
+}
+
+@media (max-width: 993px) {
+    .history_body {
+        display: grid !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .history_gif {
+        height: 80%;
+        width: 80%;
+    }
+
+    .history_text {
+        font-size: 1.5rem;
+    }
+}
