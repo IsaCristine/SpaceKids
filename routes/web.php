@@ -20,6 +20,8 @@ Route::get('/', [ViewController::class, 'index'])->name('home');
 
 Route::get('/home', [ViewController::class, 'index'])->name('home');
 
+Route::get('/histories', [ViewController::class, 'histories'])->name('histories');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');

@@ -14,24 +14,25 @@ class ViewController extends Controller
 
     public function histories()
     {
-        return view('site.histories')->with('css', 'site/histories.css');
+        $histories = History::paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
     public function spaceIndex()
     {
-        $histories = History::all()->where('category', 'space');
+        $histories = History::paginate(8)->where('category', 'space');
         return view('', compact('histories'))->with('css', 'site/history.css');
     }
 
     public function fantasyIndex()
     {
-        $histories = History::all()->where('category', 'fantasy');
+        $histories = History::paginate(8)->where('category', 'fantasy');
         return view('', compact('histories'))->with('css', 'site/history.css');
     }
     
     public function earthIndex()
     {
-        $histories = History::all()->where('category', 'earth');
+        $histories = History::paginate(8)->where('category', 'earth');
         return view('', compact('histories'))->with('css', 'site/history.css');
     }
 }
