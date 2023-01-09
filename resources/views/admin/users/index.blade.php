@@ -17,11 +17,11 @@
 <body>
     <div class="container">
         
+        <header class="col">
+            <h1 class="title">Administradores</h1>
+        </header>
+        
         <div class="top-page row">
-            <header class="col">
-                <h1 class="title">Administradores</h1>
-            </header>
-
             <div class="col search-bar">
                 <form class="d-flex">
                     <input class="form-control me-2 search" type="search" placeholder="Pesquisar" aria-label="Search">
@@ -40,12 +40,11 @@
         </div>
     
         @include('admin.users.create')
-    
-        <div class="container">
+
             <table class="table table-striped users-table">
                 <thead>
                     <tr>
-                        <th scope="col">Nome do Administrador</th>
+                        <th scope="col"></th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -76,8 +75,8 @@
                 {{ $users->appends([
                         'search' => request()->get('search', ''),
                     ])->links() }}
+            </div>
     
-        </div>
     </div>
 </body>
 

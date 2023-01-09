@@ -21,7 +21,7 @@ body {
 
 .title {
     color: whitesmoke;
-    margin: 0;
+    margin-bottom: 1.5rem;
     align-items: center !important;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ body {
 
 .users-table {
     background-color: whitesmoke !important;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-top: 0.5rem 0px 1.5rem 0px;
 }
 
