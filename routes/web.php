@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ViewController::class, 'index'])->name('home');
 
+Route::get('/home', [ViewController::class, 'index'])->name('home');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
@@ -47,4 +49,4 @@ Route::delete('/admin/users/{user}', [UserController::class, 'delete'])->name('u
 
 //Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

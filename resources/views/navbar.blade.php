@@ -3,7 +3,7 @@
         <img src="assets/logo.png" alt=""/> </a>
     <ul class="list nav__list">
         <li class="nav__item">
-            <a class="nav__link" href="#">Inicio</a>
+            <a class="nav__link" href="{{ route('home') }}">Inicio</a>
         </li>
         <li class="nav__item">
             <a class="nav__link" href="#">Espaço</a>
