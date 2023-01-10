@@ -28,7 +28,7 @@
             </div>
             <div class="col history_text">
                 <h1 class="history_title">{{ $history->title }}</h1>
-                <h4 class="history_autory">{{ $history->origin }}</h4>
+                <h4 class="history_authory">{{ $history->origin }}</h4>
 
                 <p>{{ $history->paragraph1 }}
                 </p>
