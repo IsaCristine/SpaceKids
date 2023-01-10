@@ -11,9 +11,9 @@ body {
     background-image: url("../../assets/home_bg.gif");
 }
 
-.history_title {
+.history_authory {
     margin-bottom: 2rem;
-    color: aliceblue;
+    color: rgb(118, 118, 118);
 }
 
 .history_text {
