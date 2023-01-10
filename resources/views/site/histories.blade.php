@@ -8,6 +8,7 @@
     {{--Importa todo o Bootstrap:--}}
     @vite(['resources/js/app.js'])
     {{--Importa o CSS utilizado na rota:--}}
+    <link rel="stylesheet" href="/css/site/navbar.css">
     <link rel="stylesheet" href="/css/{{$css}}">	
 
     <title>Historias</title>
@@ -17,6 +18,10 @@
 
 <body>
     {{--Container geral da página:--}}
+
+    @include('navbar')
+
+
     <div class="container histories-container">
 
         {{--Título da seção:--}}
@@ -39,38 +44,23 @@
                 <div class="cards-row">
 
                     {{--Cards da página--}}
-                    <?php for($i = 0; $i < 8; $i++): ?>
+                    @foreach ($histories as $history)
                     <div class="col-md-3 d-flex">
                       <div class="card card-style" style="width: 15rem; height: 17rem">
                           <div class="card-body">
                             <div class="btn-card">
-                              <div class="btn btn-primary disabled title-btn"><b>Título</b></div>
+                              <div class="btn btn-primary disabled title-btn"><b>{{ $history->title }}</b></div>
                               <div class="btn btn-primary history-btn read-btn">Ler</div>
                             </div>
                           </div>
                       </div>
                     </div>
-                    <?php endfor; ?>
+                    @endforeach
                     {{--Fim dos cards de teste--}}
 
                 </div>
                 {{--Paginação:--}}
-                <div class="pagination">
-                  <nav aria-label="Page navigation example">
-                      <ul class="pagination">
-                        <li class="page-item disabled">
-                          <a class="page-link">Voltar</a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">Avançar</a>
-                        </li>
-                      </ul>
-                    </nav>
-              </div>
+                {{ $histories->links() }}
                 {{--Fim da Paginação--}}
             </div>
         </div>

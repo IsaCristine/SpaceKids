@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\History;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -13,7 +14,8 @@ class ViewController extends Controller
 
     public function histories()
     {
-        return view('site.histories')->with('css', 'site/histories.css');
+        $histories = History::paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
     public function contact()
     {
@@ -32,16 +34,19 @@ class ViewController extends Controller
 
     public function spaceIndex()
     {
-        return view('');
+        $histories = History::where('category', 'space')->paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
     public function fantasyIndex()
     {
-        return view('');
+        $histories = History::where('category', 'fantasy')->paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
     public function earthIndex()
     {
-        return view('');
+        $histories = History::where('category', 'earth')->paginate(8);
+        return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 }
