@@ -15,13 +15,13 @@
                             <input type="text" required class="form-control" id="title" name="title"
                                 placeholder="Nome">
                         </div>
+
                         <div class="mb-3">
                             <label for="name" class="form-label">Categoria</label>
-                            <select class="form-select" aria-label="Default select example" name="category">
-                                <option selected>Selecione uma categoria</option>
-                                <option value="Space">Espaço</option>
-                                <option value="Fantasy">Fantasia</option>
-                                <option value="Earth">Terra</option>
+                            <select class="form-select" required aria-label="Default select example" name="category">
+                                <option @if(request()->routeIs('space.index')) selected @endif value="Space">Espaço</option>
+                                <option @if(request()->routeIs('fantasy.index')) selected @endif value="Fantasy">Fantasia</option>
+                                <option @if(request()->routeIs('earth.index')) selected @endif value="Earth">Terra</option>
                             </select>
                         </div>
                         <div class="mb-3">

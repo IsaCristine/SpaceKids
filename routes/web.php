@@ -44,7 +44,11 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //Admin History Routes
 
-Route::get('/admin/history', [HistoryController::class, 'index'])->name('history.index');
+Route::get('/admin/space', [HistoryController::class, 'space'])->name('space.index');
+
+Route::get('/admin/fantasy', [HistoryController::class, 'fantasy'])->name('fantasy.index');
+
+Route::get('/admin/earth', [HistoryController::class, 'earth'])->name('earth.index');
 
 Route::post('/admin/history/create', [HistoryController::class, 'create'])->name('history.create');
 

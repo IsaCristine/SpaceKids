@@ -68,7 +68,7 @@
                 <h2 class="card__title">Espaço </h2>
             </div>
             <div class="btn-container">
-                <button class="btn btn--entrar">Entrar</button>
+                <a href="{{ route('space.index') }}" class="btn btn--entrar">Entrar</a>
             </div>
         </div>
 
@@ -81,7 +81,7 @@
                 <h2 class="card__title">Terra</h2>
             </div>
             <div class="btn-container">
-                <button class="btn btn--entrar">Entrar</button>
+                <a href="{{ route('earth.index') }}" class="btn btn--entrar">Entrar</a>
             </div>
         </div>
 
@@ -94,7 +94,7 @@
                 <h2 class="card__title">Fantasia</h2>
             </div>
             <div class="btn-container">
-                <button class="btn btn--entrar">Entrar</button>
+                <a href="{{ route('fantasy.index') }}" class="btn btn--entrar">Entrar</a>
             </div>
         </div>
 
@@ -107,7 +107,7 @@
                 <h2 class="card__title">Administradores</h2>
             </div>
             <div class="btn-container">
-                <button class="btn btn--entrar">Entrar</button>
+                <a href="{{ route('user.index') }}" class="btn btn--entrar">Entrar</a>
             </div>
         </div>
 
@@ -120,7 +120,7 @@
                 <h2 class="card__title">Logout</h2>
             </div>
             <div class="btn-container">
-                <button class="btn btn--logout">Sair</button>
+                <a href="{{ route('logout') }}" class="btn btn--logout">Sair</a>
             </div>
         </div>
     </div>

@@ -12,11 +12,25 @@ class HistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function space()
     {
-        $histories = History::all();
+        $histories = History::all()->where('category', 'space');
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
+
+    public function earth()
+    {
+        $histories = History::all()->where('category', 'earth');
+        return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
+    }
+
+    public function fantasy()
+    {
+        $histories = History::all()->where('category', 'fantasy');
+        return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
