@@ -14,19 +14,19 @@ class HistoryController extends Controller
      */
     public function space()
     {
-        $histories = History::all()->where('category', 'space');
+        $histories = History::where('category', 'space')->paginate(8);
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 
     public function earth()
     {
-        $histories = History::all()->where('category', 'earth');
+        $histories = History::where('category', 'earth')->paginate(8);
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 
     public function fantasy()
     {
-        $histories = History::all()->where('category', 'fantasy');
+        $histories = History::where('category', 'fantasy')->paginate(8);
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 

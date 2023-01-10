@@ -55,9 +55,8 @@
     <div class="theme-title">
         <p>Bem-vindo(a), administrador!</p>
     </div>
-
-
-    {{-- page with cards arranged in a grid, each card should contain a picture on top, follow by a title and a button to access--}}
+    
+    {{--Cards:--}}
     <div class="grid">
         <div class="card card--admin">
             <header class="card__header">

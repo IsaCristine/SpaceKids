@@ -25,38 +25,71 @@
 
         @include('admin.history.create')
 
-        @foreach ($histories as $history)
-            <div style="width: 40%; padding: 4rem">
-                <div class="card card--editor">
-                    <header class="card__header">
-                        <img class="card__image" src="images/logo.png" alt="">
-                    </header>
-                    <div class="card__body">
-                        {{ $history->title }}
-                    </div>
+        <div class="container histories-container">
 
-                    <div class="d-flex justify-center">
-                        <footer class="card__footer">
-                            <button data-bs-target="#showHistory{{ $history->id }}" data-bs-toggle="modal" class="btn btn-secondary">
-                                <i class="bi bi-eye"></i>
-                            </button>
+            {{-- Título da seção: --}}
+            <div class="theme-title">
+                <p>Histórias sobre o Tema</p>
+            </div>
+
+            {{-- Barra de pesquisa: --}}
+            <div class="search-bar">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+                    <button class="btn btn-secondary" type="submit">Pesquisar</button>
+                </form>
+            </div>
+
+            {{-- Cards de histórias: --}}
+            <div class="histories-table">
+                <div class="row d-flex justify-content-between">
+                    {{-- Cards de uma row: --}}
+                    <div class="cards-row">
+
+                        {{-- Cards da página --}}
+                        @foreach ($histories as $history)
+                            <div class="col-md-3 d-flex">
+                                <div class="card card-style" style="width: 15rem; height: 17rem">
+                                    <div class="card-body">
+                                        <div class="btn-card">
+                                            <div class="btn btn-primary disabled title-btn">
+                                                <b>{{ $history->title }}</b>
+                                            </div>
+                                            <button data-bs-target="#showHistory{{ $history->id }}"
+                                                data-bs-toggle="modal" class="btn btn-secondary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button data-bs-target="#editHistory{{ $history->id }}"
+                                                data-bs-toggle="modal" class="btn btn-primary">
+                                                <i class="bi bi-pencil-square"></i>
+                                            </button>
+                                            <button data-bs-target="#deleteHistory{{ $history->id }}"
+                                                data-bs-toggle="modal" class="btn btn-danger">
+                                                <i class="bi bi-trash3"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             @include('admin.history.show')
-                            <button data-bs-target="#editHistory{{ $history->id }}" data-bs-toggle="modal" class="btn btn-primary">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                            @include('admin.history.edit')
-                            <button data-bs-target="#deleteHistory{{ $history->id }}" data-bs-toggle="modal" class="btn btn-danger">
-                                <i class="bi bi-trash3"></i>
-                            </button>
-                            @include('admin.history.delete')
-                        </footer>
-                    </div>
 
+                            @include('admin.history.edit')
+
+                            @include('admin.history.delete')
+                        @endforeach
+                        {{-- Fim dos cards de teste --}}
+
+                    </div>
+                    {{-- Paginação: --}}
+                    {{ $histories->links() }}
+                    {{-- Fim da Paginação --}}
                 </div>
             </div>
-        @endforeach
 
+        </div>
     </div>
+
 
 </body>
 

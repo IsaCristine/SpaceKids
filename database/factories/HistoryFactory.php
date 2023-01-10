@@ -17,7 +17,7 @@ class HistoryFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence,
+            'title' => $this->faker->word,
             'category' => $this->faker->randomElement(['fantasy', 'space', 'earth']),
             'paragraph1' => $this->faker->paragraph,
             'paragraph2' => $this->faker->paragraph,
