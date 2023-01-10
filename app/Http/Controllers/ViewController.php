@@ -27,11 +27,6 @@ class ViewController extends Controller
         return view('site.login')->with('css', 'site/login.css');
     }
 
-    public function dashboard()
-    {
-        return view('admin.dashboard')->with('css', 'admin/dashboard.css');
-    }
-
     public function spaceIndex()
     {
         $histories = History::where('category', 'space')->paginate(8);

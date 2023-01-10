@@ -26,7 +26,7 @@ Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 
 Route::get('/login', [ViewController::class, 'login'])->name('login');
 
-Route::get('/dashboard', [ViewController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/space', [ViewController::class, 'spaceIndex'])->name('space');
 

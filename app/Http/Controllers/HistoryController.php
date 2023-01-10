@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class HistoryController extends Controller
 {
+    public function __construct()
+    {
+        session_start();
+
+        if(!isset($_SESSION['logado'])){
+            return redirect('login')->with('error', 'Erro ao fazer login');
+        }
+    }
     /**
      * Display a listing of the resource.
      *

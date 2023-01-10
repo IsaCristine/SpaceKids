@@ -17,7 +17,7 @@ class LoginController extends Controller
     {
         if(!empty($_SESSION['logado']))
         {
-            return redirect('admin/users');
+            return redirect('dashboard');
         }    
 
         return view('login')->with('css', 'site/login.css');
