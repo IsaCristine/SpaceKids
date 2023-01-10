@@ -8,6 +8,7 @@
     {{-- Importa todo o Bootstrap: --}}
     @vite(['resources/js/app.js'])
     {{-- Importa o CSS utilizado na rota: --}}
+    <link rel="stylesheet" href="/css/admin/sidebar.css">
     <link rel="stylesheet" href="/css/{{ $css }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -15,7 +16,10 @@
 </head>
 
 <body>
-    <div class="container">
+
+    @include('admin.sidebar')
+
+    <div class="container admin-page">
         
         <header class="col">
             <h1 class="title">Administradores</h1>

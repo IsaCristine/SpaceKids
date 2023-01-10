@@ -8,6 +8,7 @@
     {{-- Importa todo o Bootstrap: --}}
     @vite(['resources/js/app.js'])
     {{-- Importa o CSS utilizado na rota: --}}
+    <link rel="stylesheet" href="/css/admin/sidebar.css">
     <link rel="stylesheet" href="/css/{{ $css }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Document</title>
@@ -15,29 +16,50 @@
 
 <body>
 
+    @include('admin.sidebar')
+
     <div class="container">
 
-        <div class="container create-btn">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createHistory">
-                Criar nova Historia
-            </button>
-        </div>
 
-        @include('admin.history.create')
-
-        <div class="container histories-container">
+        <div class="container histories-container admin-page">
 
             {{-- Título da seção: --}}
-            <div class="theme-title">
-                <p>Histórias sobre o Tema</p>
-            </div>
+            @if (request()->routeIs('space.index'))
+                <div class="theme-title">
+                    <p>Histórias sobre Espaço</p>
+                </div>
+            @endif
+            @if (request()->routeIs('earth.index'))
+                <div class="theme-title">
+                    <p>Histórias sobre Terra</p>
+                </div>
+            @endif
+            @if (request()->routeIs('fantasy.index'))
+                <div class="theme-title">
+                    <p>Histórias sobre Fantasia</p>
+                </div>
+            @endif
 
             {{-- Barra de pesquisa: --}}
-            <div class="search-bar">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-                    <button class="btn btn-secondary" type="submit">Pesquisar</button>
-                </form>
+            <div class="top-page row">
+                <div class="col search-bar">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search" type="search" placeholder="Pesquisar"
+                            aria-label="Search">
+                        <button class="btn btn-secondary btn-search" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                @include('admin.history.create')
+                <!-- Button trigger modal -->
+                <div class="col container create-btn">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#createHistory">
+                        Adicionar <i class="bi bi-plus-circle"></i>
+                    </button>
+                </div>
             </div>
 
             {{-- Cards de histórias: --}}

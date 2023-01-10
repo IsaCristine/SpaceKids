@@ -10,6 +10,7 @@
     @vite(['resources/js/nav.js'])
 
     {{--Importa o CSS utilizado na rota:--}}
+    <link rel="stylesheet" href="/css/admin/dashboard.css">
     <link rel="stylesheet" href="/css/{{$css}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Historias</title>
@@ -18,34 +19,8 @@
 
 <body>
 
-<button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-    <i class="fas fa-bars"></i>
-</button>
 
-
-{{-- navbar --}}
-<nav>
-{{--    <div class="logo-container" data-nav-visible="false">--}}
-{{--        <img src="assets/logo.png" class="logo" alt="logo">--}}
-{{--    </div>--}}
-    <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-        <li class="active">
-            <a href="#" class="btn btn--entrar">Espaco</a>
-        </li>
-        <li class="active">
-            <a href="#" class="btn btn--entrar">Terra</a>
-        </li>
-        <li class="active">
-            <a href="#" class="btn btn--entrar">Fantasia</a>
-        </li>
-        <li class="active">
-            <a href="#" class="btn btn--entrar">Administradores</a>
-        </li>
-        <li class="active">
-            <a href="#" class="btn btn--logout">Sair</a>
-        </li>
-    </ul>
-</nav>
+    @include('admin.sidebar')
 
 
 {{--Container geral da página:--}}

@@ -3,7 +3,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Novo Administrador</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Nova História</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('history.create') }}" method="POST">

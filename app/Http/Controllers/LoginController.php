@@ -20,7 +20,7 @@ class LoginController extends Controller
             return redirect('admin/users');
         }    
 
-        return view('login')->with('css', 'login.css');
+        return view('login')->with('css', 'site/login.css');
     }
 
     public function login(Request $request)

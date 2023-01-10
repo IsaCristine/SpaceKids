@@ -1,0 +1,55 @@
+/*Define cores da marca:*/
+:root {
+    --azul-1: #14A3FE;
+    --azul-2: #012454;
+    --verde: #07FFE1;
+    --amarelo: #FAFF07;
+    --rosa: #FB2AAB;
+}
+
+.admin-page {
+    margin-top: 5rem;
+}
+
+/* buttons */
+
+.btn-custom {
+    background: #C51ECA !important;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem !important;
+    margin: 0.5rem 0.3rem;
+    outline: 0;
+    padding: 0.3rem 3rem !important;
+    text-align: center;
+    transition: background 0.15s;
+    white-space: nowrap;
+
+}
+
+.btn--entrar {
+    color: white !important;
+    background: #1C006C !important;
+}
+
+.btn--entrar:hover {
+    background: rgb(73, 43, 157) !important;
+}
+
+.btn--logout {
+    color: white !important;
+    background: #FD0000 !important;
+}
+
+.btn--logout:hover {
+    background: rgb(255, 72, 72) !important;
+}
+
+.sidenav {
+    display: flex;
+    align-items: center;
+}
+
+
