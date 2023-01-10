@@ -10,7 +10,7 @@
     {{--Importa o CSS utilizado na rota:--}}
     <link rel="stylesheet" href="/css/{{$css}}">
 
-    <title>Historias</title>
+    <title>Contato</title>
 </head>
 
 
@@ -54,7 +54,7 @@
     <div class="background">
         <form class="form-contact" action="" method="POST">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Nome</label>
                 <input
                     class="form-control input__name"
                     type="text"
