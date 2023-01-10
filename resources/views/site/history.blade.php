@@ -37,7 +37,7 @@
                 <p>{{ $history->paragraph3 }}
                 </p>
 
-                <button type="button" class="btn btn-primary back-btnn">Voltar</button>
+                <a href="javascript:history.back()" class="btn btn-primary back-btnn">Voltar</a>
             </div>
         </div>
     </div>
