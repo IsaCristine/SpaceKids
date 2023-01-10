@@ -27,23 +27,14 @@
                 <img src="assets/colored_planet.gif" alt="Gif de um planeta colorido" class="history_gif">
             </div>
             <div class="col history_text">
-                <h1 class="history_title">Título da História</h1>
-                <h4 class="history_autory">Autor</h4>
+                <h1 class="history_title">{{ $history->title }}</h1>
+                <h4 class="history_autory">{{ $history->origin }}</h4>
 
-                <p>TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTexto
+                <p>{{ $history->paragraph1 }}
                 </p>
-                <p>TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTexto
+                <p>{{ $history->paragraph2 }}
                 </p>
-                <p>TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto
-                    TextoTextoTextoTexto
+                <p>{{ $history->paragraph3 }}
                 </p>
 
                 <button type="button" class="btn btn-primary back-btnn">Voltar</button>
