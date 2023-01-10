@@ -50,7 +50,7 @@
                           <div class="card-body">
                             <div class="btn-card">
                               <div class="btn btn-primary disabled title-btn"><b>{{ $history->title }}</b></div>
-                              <div class="btn btn-primary history-btn read-btn">Ler</div>
+                              <a href="{{ route('history', $history->id) }}" class="btn btn-primary history-btn read-btn">Ler</a>
                             </div>
                           </div>
                       </div>

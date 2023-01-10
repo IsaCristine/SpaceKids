@@ -34,6 +34,8 @@ Route::get('/fantasy', [ViewController::class, 'fantasyIndex'])->name('fantasy')
 
 Route::get('/earth', [ViewController::class, 'earthIndex'])->name('earth');
 
+Route::get('/history/{id}', [ViewController::class, 'history'])->name('history');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');

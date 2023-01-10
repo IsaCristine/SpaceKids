@@ -49,4 +49,10 @@ class ViewController extends Controller
         $histories = History::where('category', 'earth')->paginate(8);
         return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
+
+    public function history($id)
+    {
+        $history = History::find($id);
+        return view('site.history', compact('history'))->with('css', 'site/history.css');
+    }
 }
