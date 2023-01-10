@@ -2,6 +2,7 @@
 :root {
     --azul-1: #14A3FE;
     --azul-2: #012454;
+    --azul-3: #001736;
     --verde: #07FFE1;
     --amarelo: #FAFF07;
     --rosa: #FB2AAB;
@@ -9,8 +10,8 @@
 
 /*Insere background de exemplo:*/
 body {
-    background-color: rgb(0, 3, 30) !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media3.giphy.com/media/sWFYgYFjHGugleQdO7/giphy.gif?cid=ecf05e47153jnwqatv9sogs12ldfxmih8my2df6f346efh3s&rid=giphy.gif&ct=s);
+    background-color: var(--azul-3) !important;
+
 }
 
 /*Título da seção:*/
@@ -28,10 +29,23 @@ body {
 }
 
 /*Barra de pesquisa:*/
-.search-bar {
-    margin-bottom: 2rem;
+
+.top-page {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.btn-search {
+    background-color: white !important;
+    color: grey !important;
+}
+
+.create-btn {
+    display: flex;
+    justify-content: end;
 }
 
 /*Cards da página:*/

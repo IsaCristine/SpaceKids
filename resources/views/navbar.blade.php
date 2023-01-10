@@ -21,7 +21,7 @@
             <a class="nav-link" href="{{ route('fantasy') }}">Fantasia</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" href="{{ route('contact') }}">Contato</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}">Login</a>

@@ -21,7 +21,7 @@
     <div class="container">
 
 
-        <div class="container histories-container admin-page">
+        <div class="container admin-page">
 
             {{-- Título da seção: --}}
             @if (request()->routeIs('space.index'))
