@@ -68,6 +68,7 @@ body {
     display: flex !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
+    background-size: cover !important;
     border: 5px solid var(--azul-1) !important;
     border-radius: 5px !important;
 }
