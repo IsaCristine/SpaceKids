@@ -19,7 +19,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'titulo',
 
-            'categoy' => 'categoria',
+            'category' => 'categoria',
             
             'paragraph1' => 'Escreva o parágrafo 1 aqui',
             
@@ -37,7 +37,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'O Sol',
 
-            'categoy' => 'space',
+            'category' => 'space',
 
             'paragraph1' => 'Há muito tempo, no frio e escuro espaço, existia
             um rio invisível. Esse rio não era feito de água, mas de gás. Esse gás
@@ -60,7 +60,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'Estrela Cadente',
 
-            'categoy' => 'space',
+            'category' => 'space',
             
             'paragraph1' => 'Era uma vez, no frio e escuro espaço, uma pedrinha. Ela não era brilhante e não tinha amigos. Todos 
             os outros astros tinham amigos, mas ela não. Ela ficava muito triste. 
@@ -83,7 +83,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'O Buraco Negro',
 
-            'categoy' => 'space',
+            'category' => 'space',
             
             'paragraph1' => 'Era uma vez, uma grande e velha estrela muito comilona. 
             Um dia, a estrela cresceu tanto que explodiu e parou de brilhar!',
@@ -108,7 +108,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'Aquecimento Global',
 
-            'categoy' => 'earth',
+            'category' => 'earth',
             
             'paragraph1' => 'Para deixar o Planeta Terra quentinho, existe uma 
             máquina muito especial: o Sol! Ele é muito quente e brilha muito forte. 
@@ -132,7 +132,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'A Chuva',
 
-            'categoy' => 'earth',
+            'category' => 'earth',
             
             'paragraph1' => 'Era uma vez, uma pequena gotinha de água que vivia na nuvem. 
             Ela era muito feliz, porque tinha muitos amigos. Todos os dias, ela brincava 
@@ -154,7 +154,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'A Plantinha',
 
-            'categoy' => 'earth',
+            'category' => 'earth',
             
             'paragraph1' => 'Era uma vez, uma pequena sementinha que vivia na terrinha a cochilar. 
             Um dia, ela despertou e começou a germinar.',
@@ -178,7 +178,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'O Dragão',
 
-            'categoy' => 'fantasy',
+            'category' => 'fantasy',
             
             'paragraph1' => 'Era uma vez, um dragão muito bravo que vivia no fundo de um 
             lago. Ele era muito grande e tinha muitas escamas. Ele era muito bravo, porque 
@@ -200,7 +200,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'Gato Espacial',
 
-            'categoy' => 'fantasy',
+            'category' => 'fantasy',
             
             'paragraph1' => 'Era uma vez um gato, que vivia saltando por todos os lados. 
             Certo dia, ele viu um foguete e quis ir com ele. O gatinho pulou e pulou, até que 
@@ -220,7 +220,7 @@ class HistorySeeder extends Seeder
         History::factory()->create([
             'title' => 'O Fotógrafo Alienígena',
 
-            'categoy' => 'fantasy',
+            'category' => 'fantasy',
             
             'paragraph1' => 'Era uma vez, um fotógrafo alienígena que vivia em um planeta 
             muito distante. Ele era muito curioso e queria conhecer a Terra.',
