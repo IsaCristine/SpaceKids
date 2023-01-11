@@ -22,6 +22,7 @@ class HistoryFactory extends Factory
             'paragraph1' => $this->faker->paragraph,
             'paragraph2' => $this->faker->paragraph,
             'paragraph3' => $this->faker->paragraph,
+            'image' => $this->faker->randomElement(['logo.png', 'colored_planet.gif', 'home_bg.gif']),
             'origin' => $this->faker->sentence,
         ];
     }

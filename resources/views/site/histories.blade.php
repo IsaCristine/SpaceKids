@@ -16,7 +16,9 @@
 
 
 
-<body>
+<body style="@if(request()->routeIs('space'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media3.giphy.com/media/sWFYgYFjHGugleQdO7/giphy.gif?cid=ecf05e47153jnwqatv9sogs12ldfxmih8my2df6f346efh3s&rid=giphy.gif&ct=s);@endif
+    @if(request()->routeIs('earth'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media1.giphy.com/media/iIATYVzvV7lHiQbh0T/giphy.gif?cid=790b76111f1a6bd8c968546b6cc783a51f07eccadb7ed1ec&rid=giphy.gif&ct=s);@endif
+    @if(request()->routeIs('fantasy'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media0.giphy.com/media/1gP0UvJKH9Hqc4EJAa/giphy.gif?cid=790b76111c04eed00b973fd2369516a7f09606f9cdef5b74&rid=giphy.gif&ct=s);@endif">
     {{--Container geral da página:--}}
 
     @include('navbar')
@@ -47,7 +49,7 @@
                     @foreach ($histories as $history)
                     <div class="col-md-3 d-flex">
                       <div class="card card-style" style="width: 15rem; height: 17rem">
-                          <div class="card-body">
+                          <div class="card-body" style="background-image: url(/assets/{{ $history->image }})">
                             <div class="btn-card">
                               <div class="btn btn-primary disabled title-btn"><b>{{ $history->title }}</b></div>
                               <a href="{{ route('history', $history->id) }}" class="btn btn-primary history-btn read-btn">Ler</a>

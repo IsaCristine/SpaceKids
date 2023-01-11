@@ -15,7 +15,11 @@
 </head>
 
 
-<body>
+<body style=" 
+@if($history->category === 'space')background-image: url(../../assets/home_bg.gif)@endif
+@if($history->category === 'fantasy')background-image: url(https://media0.giphy.com/media/1gP0UvJKH9Hqc4EJAa/giphy.gif?cid=790b76111c04eed00b973fd2369516a7f09606f9cdef5b74&rid=giphy.gif&ct=s); background-color: #000000;@endif
+@if($history->category === 'earth')background-image: url(../../assets/home_bg.gif)@endif
+"> 
 
     @include('navbar')
 
@@ -23,7 +27,7 @@
     <div class="container history_container">
         <div class="row align-items-center justify-content-center history_body">
             <div class="col d-flex justify-content-center">
-                <img src="assets/colored_planet.gif" alt="Gif de um planeta colorido" class="history_gif">
+                <img src="/assets/{{ $history->image }}" alt="Gif de um planeta colorido" class="history_gif">
             </div>
             <div class="col history_text">
                 <h1 class="history_title">{{ $history->title }}</h1>

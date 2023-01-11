@@ -72,7 +72,7 @@
                         @foreach ($histories as $history)
                             <div class="col-md-3 d-flex">
                                 <div class="card card-style" style="width: 15rem; height: 17rem">
-                                    <div class="card-body">
+                                    <div class="card-body" style="background-image: url(/assets/{{ $history->image }})">
                                         <div class="btn-card">
                                             <div class="btn btn-primary disabled title-btn">
                                                 <b>{{ $history->title }}</b>

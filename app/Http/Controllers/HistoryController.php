@@ -23,6 +23,8 @@ class HistoryController extends Controller
     public function space()
     {
         $histories = History::where('category', 'space')->paginate(8);
+
+        // dd($histories[0]->image);
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 
