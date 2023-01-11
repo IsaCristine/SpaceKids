@@ -20,23 +20,33 @@ class HistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function space()
+    public function space(Request $request)
     {
-        $histories = History::where('category', 'space')->paginate(8);
+        if($request->search)
+            $histories = History::where('category', 'space')->where('title', 'like', '%'.$request->search.'%')->paginate(8);
+        else
+            $histories = History::where('category', 'space')->paginate(8);
 
-        // dd($histories[0]->image);
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 
-    public function earth()
+    public function earth(Request $request)
     {
-        $histories = History::where('category', 'earth')->paginate(8);
+        if($request->search)
+            $histories = History::where('category', 'earth')->where('title', 'like', '%'.$request->search.'%')->paginate(8);
+        else
+            $histories = History::where('category', 'earth')->paginate(8);
+
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 
-    public function fantasy()
+    public function fantasy(Request $request)
     {
-        $histories = History::where('category', 'fantasy')->paginate(8);
+        if($request->search)
+            $histories = History::where('category', 'fantasy')->where('title', 'like', '%'.$request->search.'%')->paginate(8);
+        else
+            $histories = History::where('category', 'fantasy')->paginate(8);
+            
         return view('admin.history.index', compact('histories'))->with('css', 'admin/history.css');
     }
 

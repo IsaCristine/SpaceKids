@@ -13,7 +13,7 @@ class UserController extends Controller
     {
         session_start();
 
-        if(!isset($_SESSION['logado'])){
+        if (!isset($_SESSION['logado'])) {
             return redirect('login')->with('error', 'Erro ao fazer login');
         }
     }
@@ -30,14 +30,13 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->search){
-            $users = User::where('name', 'like', '%'.$request->search.'%')->paginate(10);
+        if ($request->search) {
+            $users = User::where('name', 'like', '%' . $request->search . '%')->paginate(10);
             return view('admin.users.index', compact('users'))->with('css', 'admin/users.css');
         }
-        else{
-            $users = User::paginate(10);
-            return view('admin.users.index', compact('users'))->with('css', 'admin/users.css');
-        }
+
+        $users = User::paginate(10);
+        return view('admin.users.index', compact('users'))->with('css', 'admin/users.css');
     }
 
     /**

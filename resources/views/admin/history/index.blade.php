@@ -44,7 +44,7 @@
             <div class="top-page row">
                 <div class="col search-bar">
                     <form class="d-flex">
-                        <input class="form-control me-2 search" type="search" placeholder="Pesquisar"
+                        <input class="form-control me-2 search" type="search" name="search" placeholder="Pesquisar"
                             aria-label="Search">
                         <button class="btn btn-secondary btn-search" type="submit">
                             <i class="bi bi-search"></i>

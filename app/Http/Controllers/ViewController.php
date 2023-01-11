@@ -27,21 +27,33 @@ class ViewController extends Controller
         return view('site.login')->with('css', 'site/login.css');
     }
 
-    public function spaceIndex()
+    public function spaceIndex(Request $request)
     {
-        $histories = History::where('category', 'space')->paginate(8);
+        if($request->search)
+            $histories = History::where('category', 'space')->where('title', 'like', '%'.$request->search.'%')->paginate(8);
+        else
+            $histories = History::where('category', 'space')->paginate(8);
+
         return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
-    public function fantasyIndex()
+    public function fantasyIndex(Request $request)
     {
-        $histories = History::where('category', 'fantasy')->paginate(8);
+        if($request->search)
+            $histories = History::where('category', 'fantasy')->where('title', 'like', '%'.$request->search.'%')->paginate(8);
+        else
+            $histories = History::where('category', 'fantasy')->paginate(8);
+
         return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
-    public function earthIndex()
+    public function earthIndex(Request $request)
     {
-        $histories = History::where('category', 'earth')->paginate(8);
+        if($request->search)
+            $histories = History::where('category', 'earth')->where('title', 'like', '%'.$request->search.'%')->paginate(8);
+        else
+            $histories = History::where('category', 'earth')->paginate(8);
+
         return view('site.histories', compact('histories'))->with('css', 'site/histories.css');
     }
 
