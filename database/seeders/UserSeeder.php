@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
             'email' => 'isabelly@admin.com',
         ]);
 
-        User::factory()->count(50)->create();
+        User::factory()->count(5)->create();
 
     }
 }
