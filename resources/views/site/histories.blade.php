@@ -49,7 +49,7 @@
                     @foreach ($histories as $history)
                     <div class="col-md-3 d-flex">
                       <div class="card card-style" style="width: 15rem; height: 17rem">
-                          <div class="card-body" style="background-image: url(/assets/{{ $history->image }})">
+                          <div class="card-body" style="background-image: url(/img/{{ $history->image }})">
                             <div class="btn-card">
                               <div class="btn btn-primary disabled title-btn"><b>{{ $history->title }}</b></div>
                               <a href="{{ route('history', $history->id) }}" class="btn btn-primary history-btn read-btn">Ler</a>

@@ -27,7 +27,7 @@
     <div class="container history_container">
         <div class="row align-items-center justify-content-center history_body">
             <div class="col d-flex justify-content-center">
-                <img src="/assets/{{ $history->image }}" alt="Gif de um planeta colorido" class="history_gif">
+                <img src="/img/{{ $history->image }}" alt="Gif de um planeta colorido" class="history_gif">
             </div>
             <div class="col history_text">
                 <h1 class="history_title">{{ $history->title }}</h1>
