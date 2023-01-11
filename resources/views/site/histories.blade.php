@@ -16,9 +16,12 @@
 
 
 
-<body style="@if(request()->routeIs('space'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media3.giphy.com/media/sWFYgYFjHGugleQdO7/giphy.gif?cid=ecf05e47153jnwqatv9sogs12ldfxmih8my2df6f346efh3s&rid=giphy.gif&ct=s);@endif
-    @if(request()->routeIs('earth'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media1.giphy.com/media/iIATYVzvV7lHiQbh0T/giphy.gif?cid=790b76111f1a6bd8c968546b6cc783a51f07eccadb7ed1ec&rid=giphy.gif&ct=s);@endif
-    @if(request()->routeIs('fantasy'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media0.giphy.com/media/1gP0UvJKH9Hqc4EJAa/giphy.gif?cid=790b76111c04eed00b973fd2369516a7f09606f9cdef5b74&rid=giphy.gif&ct=s);@endif">
+<body style="@if(request()->routeIs('space'))background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://media3.giphy.com/media/sWFYgYFjHGugleQdO7/giphy.gif?cid=ecf05e47153jnwqatv9sogs12ldfxmih8my2df6f346efh3s&rid=giphy.gif&ct=s);
+background-color: rgb(0, 3, 30);@endif
+    @if(request()->routeIs('earth'))background-image: linear-gradient(rgba(2, 2, 59, 0.6), rgba(2, 2, 59, 0.6)), url(https://media1.giphy.com/media/ddHNWtQgzG8w17fnqS/giphy.gif?cid=ecf05e47vyaaa4hw8ekiytvzd8sji6k4ttn25m49lodzxqom&rid=giphy.gif&ct=s);
+    background-color: rgb(95, 182, 249);@endif
+    @if(request()->routeIs('fantasy'))background-image: linear-gradient(rgba(5, 5, 5, 0.6), rgba(0, 0, 0, 0.6)), url(https://media1.giphy.com/media/1gP0UvJKH9Hqc4EJAa/giphy.gif?cid=ecf05e47gjqy71bfyxjli3mylogsho5vuyyw0y6a22019yoa&rid=giphy.gif&ct=s);
+    background-color: rgb(183, 2, 248);@endif">
     {{--Container geral da página:--}}
 
     @include('navbar')
