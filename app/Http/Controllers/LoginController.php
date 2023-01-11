@@ -49,7 +49,7 @@ class LoginController extends Controller
 
         $_SESSION['logado'] = true;
     
-        return redirect('admin/users');
+        return redirect('dashboard');
     }
 
     public function logout(Request $request)
