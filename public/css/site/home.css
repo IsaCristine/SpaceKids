@@ -1,3 +1,12 @@
+:root {
+    --azul-1: #14A3FE;
+    --azul-2: #012454;
+    --azul-3: #001736;
+    --verde: #07FFE1;
+    --amarelo: #FAFF07;
+    --rosa: #FB2AAB;
+}
+
 body {
     background-image: url("../../assets/home_bg.gif");
 }
@@ -6,6 +15,18 @@ body {
     color: aliceblue;
     text-align: center;
     font-size: 1.5rem;
+}
+
+.home-btn {
+    background-color: var(--azul-1) !important;
+    border-color: var(--azul-1) !important;
+    letter-spacing: 1px;
+}
+
+.home-btn:hover {
+    background-color: var(--rosa) !important;
+    border-color: var(--rosa) !important;
+    transition: 0.3s;
 }
 
 @media (max-width: 993px) {

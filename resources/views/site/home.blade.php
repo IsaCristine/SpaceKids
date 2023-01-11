@@ -28,6 +28,8 @@
             </div>
             <div class="col home_text">
                 <p>Um site para crianças explorarem o Universo e expandirem suas mentes</p>
+
+                <a href="{{ route('space') }}" class="btn btn-primary home-btn"><b>Iniciar</b></a>
             </div>
         </div>
     </div>
