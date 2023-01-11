@@ -55,7 +55,13 @@ class HistoryController extends Controller
 
         $history::create($data);
 
-        return redirect()->route('history.index')->with('success', 'História adicionada com sucesso!');
+        if($history->category === 'fantasy') {
+            return redirect()->route('fantasy.index')->with('success', 'História adicionada com sucesso!');
+        } elseif($history->category === 'space') {
+            return redirect()->route('space.index')->with('success', 'História adicionada com sucesso!');
+        } else {
+            return redirect()->route('earth.index')->with('success', 'História adicionada com sucesso!');
+        }
     }
 
 
@@ -82,7 +88,13 @@ class HistoryController extends Controller
 
         $history->update($data);
 
-        return redirect()->route('history.index')->with('success', 'História atualizada com sucesso!');
+        if($history->category === 'fantasy') {
+            return redirect()->route('fantasy.index')->with('success', 'História adicionada com sucesso!');
+        } elseif($history->category === 'space') {
+            return redirect()->route('space.index')->with('success', 'História adicionada com sucesso!');
+        } else {
+            return redirect()->route('earth.index')->with('success', 'História adicionada com sucesso!');
+        }
     }
 
     /**
@@ -95,6 +107,12 @@ class HistoryController extends Controller
     {
         $history->delete();
 
-        return redirect()->route('history.index')->with('success', 'História removida com sucesso!');
+        if($history->category === 'fantasy') {
+            return redirect()->route('fantasy.index')->with('success', 'História adicionada com sucesso!');
+        } elseif($history->category === 'space') {
+            return redirect()->route('space.index')->with('success', 'História adicionada com sucesso!');
+        } else {
+            return redirect()->route('earth.index')->with('success', 'História adicionada com sucesso!');
+        }
     }
 }
