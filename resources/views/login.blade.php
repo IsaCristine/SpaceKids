@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/site/navbar.css">
     <link rel="stylesheet" href="/css/{{$css}}">
 
-    <title>Historias</title>
+    <title>Login</title>
 </head>
 
 
