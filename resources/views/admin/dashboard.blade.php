@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/admin/dashboard.css">
     <link rel="stylesheet" href="/css/{{$css}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Historias</title>
+    <title>Dashboard</title>
 </head>
 
 
