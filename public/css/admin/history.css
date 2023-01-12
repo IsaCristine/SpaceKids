@@ -10,14 +10,14 @@
 
 /*Insere background de exemplo:*/
 body {
-    background-color: var(--azul-3) !important;
+    background-color: rgb(3, 3, 44) !important;
 
 }
 
 /*Título da seção:*/
 .theme-title {
     color: rgb(242, 242, 242) !important;
-    font-size: 24px !important;
+    font-size: 32px !important;
     margin-bottom: 3rem;
     align-items: center !important;
 }
@@ -71,6 +71,7 @@ body {
     background-size: cover !important;
     border: 5px solid var(--azul-1) !important;
     border-radius: 5px !important;
+    background-color: var(--azul-2) !important;
 }
 
 .card-body:hover {

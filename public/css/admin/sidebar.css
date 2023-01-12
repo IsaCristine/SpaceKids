@@ -7,6 +7,10 @@
     --rosa: #FB2AAB;
 }
 
+.sidebar-div {
+    box-shadow: grey 0px 0px 10px 0px !important;
+}
+
 .admin-page {
     margin-top: 5rem;
 }

@@ -1,11 +1,10 @@
-<nav class="navbar navbar-dark fixed-top">
+<nav class="navbar navbar-dark fixed-top sidebar-div">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" style="background-color: #002863;"
-            aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" style="background-color: rgb(3, 3, 44) !important">
             <div class="offcanvas-header d-flex justify-content-end">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
