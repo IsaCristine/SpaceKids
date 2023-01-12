@@ -19,12 +19,13 @@
 }
 
 .logo {
-    height: 90% !important;
-    width: 90% !important;
+    height: 80% !important;
+    width: 80% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 0 !important;
+    margin-bottom: 0.5rem;
 }
 
 .admin-page {
