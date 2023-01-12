@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/admin/sidebar.css">
     <link rel="stylesheet" href="/css/{{ $css }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>Document</title>
+    <title>ADM Historia</title>
 </head>
 
 <body>
