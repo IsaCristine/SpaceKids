@@ -28,14 +28,14 @@
 
     {{--Título da seção:--}}
     <div class="theme-title">
-        <p>Bem-vindo(a), administrador!</p>
+        <p>Bem-vindo(a), Administrador!</p>
     </div>
     
     {{--Cards:--}}
     <div class="grid">
         <div class="card card--admin">
             <header class="card__header">
-                <img class="card__image" src="assets/logo.png" alt="">
+                <img class="card__image" src="../img/black_hole.gif" alt="">
             </header>
             <div class="card__line"></div>
             <div class="card__body">
@@ -48,7 +48,7 @@
 
         <div class="card card--admin">
             <header class="card__header">
-                <img class="card__image" src="assets/logo.png" alt="">
+                <img class="card__image" src="../img/earth_1.gif" alt="">
             </header>
             <div class="card__line"></div>
             <div class="card__body">
@@ -61,7 +61,7 @@
 
         <div class="card card--admin">
             <header class="card__header">
-                <img class="card__image" src="assets/logo.png" alt="">
+                <img class="card__image" src="../img/fantasy_1.gif" alt="">
             </header>
             <div class="card__line"></div>
             <div class="card__body">
@@ -74,7 +74,7 @@
 
         <div class="card card--admin">
             <header class="card__header">
-                <img class="card__image" src="assets/logo.png" alt="">
+                <img class="card__image" src="../img/universe.gif" alt="">
             </header>
             <div class="card__line"></div>
             <div class="card__body">
