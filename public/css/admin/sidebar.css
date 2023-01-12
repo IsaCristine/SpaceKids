@@ -7,10 +7,6 @@
     --rosa: #FB2AAB;
 }
 
-.sidebar-div {
-    box-shadow: grey 0px 0px 10px 0px !important;
-}
-
 .sidebar-body {
     display: flex !important;
     justify-content: center !important;
@@ -19,6 +15,15 @@
 }
 
 .sidebar-body ul {
+    padding: 0 !important;
+}
+
+.logo {
+    height: 90% !important;
+    width: 90% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     padding: 0 !important;
 }
 

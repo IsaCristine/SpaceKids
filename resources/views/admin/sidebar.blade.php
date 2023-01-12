@@ -10,6 +10,11 @@
             </div>
             <div class="offcanvas-body sidebar-body">
                 <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 sidenav">
+                    <li class="nav-item logo">
+                        <a href="{{ route('user.index') }}" class="logo">
+                            <img class="logo" src="../assets/logo.png" alt="">
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('space.index') }}" class="btn btn-custom btn--entrar">Espaco</a>
                     </li>
