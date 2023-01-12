@@ -8,8 +8,8 @@
             <div class="offcanvas-header d-flex justify-content-end">
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 sidenav">
+            <div class="offcanvas-body sidebar-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 sidenav">
                     <li class="nav-item">
                         <a href="{{ route('space.index') }}" class="btn btn-custom btn--entrar">Espaco</a>
                     </li>

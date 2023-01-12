@@ -11,6 +11,17 @@
     box-shadow: grey 0px 0px 10px 0px !important;
 }
 
+.sidebar-body {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; 
+    padding: 0 !important;
+}
+
+.sidebar-body ul {
+    padding: 0 !important;
+}
+
 .admin-page {
     margin-top: 5rem;
 }
