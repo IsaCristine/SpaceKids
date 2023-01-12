@@ -20,13 +20,15 @@ body {
 .home-btn {
     background-color: var(--azul-1) !important;
     border-color: var(--azul-1) !important;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: var(--azul-3) !important;
 }
 
 .home-btn:hover {
     background-color: var(--rosa) !important;
     border-color: var(--rosa) !important;
     transition: 0.3s;
+    color: whitesmoke !important;
 }
 
 @media (max-width: 993px) {

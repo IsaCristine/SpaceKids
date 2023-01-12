@@ -14,13 +14,13 @@
 }
 
 .navbar_site {
-    background-color: var(--preto) !important;
+    background-color: var(--azul-3) !important;
     color: white !important;
-    box-shadow: var(--azul-2) 0px 0px 10px 0px !important;
+    box-shadow: gray 0px 0px 10px 0px !important;
 }
 
 .navbar_site a {
-    color: var(--azul-1) !important;
+    color: whitesmoke!important;
     display: flex;
     justify-content: end !important;
     margin-left: 1.5rem;
