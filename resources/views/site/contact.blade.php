@@ -8,6 +8,7 @@
     {{--Importa todo o Bootstrap:--}}
     @vite(['resources/js/app.js'])
     {{--Importa o CSS utilizado na rota:--}}
+    <link rel="stylesheet" href="/css/site/navbar.css">
     <link rel="stylesheet" href="/css/{{$css}}">
 
     <title>Contato</title>
@@ -17,30 +18,7 @@
 <body>
 
 {{-- navbar --}}
-<nav class="nav">
-    <a class="nav__logo" href="#">
-        <img src="assets/logo.png" alt=""/> </a>
-    <ul class="list nav__list">
-        <li class="nav__item">
-            <a class="nav__link" href="#">Inicio</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Espaço</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Terra</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Fantasia</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Contato</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link" href="#">Login</a>
-        </li>
-    </ul>
-</nav>
+@include('navbar')
 
 {{--Container geral da página:--}}
 <div class="container contact-container">
